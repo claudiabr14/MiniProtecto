@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmética & Belleza</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+  <!-- CABECERA GLOBAL DEL SITIO -->
+  <header class="site-header">
+    <h1>Belleza Natural</h1>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#tabla">Tabla</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BOTÓN HAMBURGUESA FIJO PARA EL MENÚ LATERAL -->
+  <button class="open-menu" aria-label="Abrir menú lateral">☰</button>
+
+  <!-- MENÚ LATERAL DESLIZANTE -->
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#tabla">Tabla</a></li>
+      <li><a href="#formulario">Formulario</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- SECCIÓN HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-texto">
+        <h2>Descubre tu mejor versión</h2>
+        <p>Productos de cosmética natural, rutinas de belleza y consejos para cuidar tu piel.</p>
+      </div>
+      <img src="./img/Cosmeticos.jfif" alt="Cosméticos y belleza">
+    </section>
+
+    <!-- SECCIÓN GALERÍA -->
+    <section id="galeria">
+      <h2>Galería de productos</h2>
+
+      <div class="galeria-grid">
+        <img src="./img/CremaHidratante.jfif" alt="Crema facial">
+        <img src="./img/Maquillaje.webp" alt="Maquillaje">
+        <img src="./img/Serum.jfif" alt="Serum">
+        <img src="./img/AguaMicelar.jfif" alt="Agua Micelar">
+        <img src="./img/Brochas.webp" alt="Brochas de maquillaje">
+        <img src="./img/Mascarillaswebp.webp" alt="Mascarillas">
+      </div>
+    </section>
+
+    <!-- SECCIÓN TABLA -->
+    <section id="tabla">
+      <h2>Comparativa de Productos</h2>
+
+      <table class="tabla-cosmetica">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Valoración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Crema Hidratante</td>
+            <td>Hidratación diaria</td>
+            <td>18,00€</td>
+            <td>★★★★★</td>
+          </tr>
+          <tr>
+            <td>Sérum</td>
+            <td>Tratamiento</td>
+            <td>15,50€</td>
+            <td>★★★★☆</td>
+          </tr>
+          <tr>
+            <td>Agua Micelar</td>
+            <td>Limpieza</td>
+            <td>4,99€</td>
+            <td>★★★★☆</td>
+          </tr>
+          <tr>
+            <td>Mascarilla Facial</td>
+            <td>Cuidado intensivo</td>
+            <td>3,50€</td>
+            <td>★★★★★</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section id="formulario">
+      <h2>Formulario de contacto</h2>
+
+      <form class="formulario-belleza">
+        <label>Nombre:
+          <input type="text" required>
+        </label>
+
+        <label>Email:
+          <input type="email" required>
+        </label>
+
+        <label>Consulta:
+          <textarea rows="4" required></textarea>
+        </label>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Email: contacto@bellezanatural.com</p>
+      <p>Teléfono: 666 123 789</p>
+      <p>Síguenos en redes sociales para más consejos y novedades.</p>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <p><a href="#hero">&copy; 2025 — Proyecto Web de Cosmética</a></p>
+  </footer>
+
+  <!-- JavaScript mínimo para abrir/cerrar el menú lateral -->
+  <script>
+    const sideMenu = document.getElementById("sideMenu");
+    const toggleBtn = document.querySelector(".open-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+      toggleBtn.classList.toggle("active");
+
+      toggleBtn.textContent =
+        sideMenu.classList.contains("active") ? "✖" : "☰";
+    });
+  </script>
+
+</body>
+</html>

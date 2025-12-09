@@ -1,0 +1,223 @@
+/* ===== RESET CSS básico ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ESTILOS BASE ===== */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-color: #fdf6f8;
+  color: #333;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 20px auto;
+}
+
+/* ===== CABECERA ===== */
+.site-header {
+  background: #e6b8c8;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-left: 30px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.main-nav a:hover {
+  background: #d99ab3;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.open-menu {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+  font-size: 26px;
+  background: #e6b8c8;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.open-menu.active {
+  background: #d893ac;
+  transform: rotate(90deg);
+}
+
+/* ===== MENÚ LATERAL ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -230px;
+  width: 230px;
+  height: 100%;
+  background: white;
+  padding-top: 60px;
+  border-right: 2px solid #e6b8c8;
+  transition: left 0.3s ease;
+  z-index: 15;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+}
+
+.side-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #e06a8c;
+  font-weight: bold;
+}
+
+.side-menu a:hover {
+  background: #ffe4ec;
+}
+
+/* ===== SECCIÓN HERO ===== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-texto {
+  flex: 1 1 300px;
+}
+
+.hero img {
+  flex: 1 1 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== GALERÍA ===== */
+#galeria h2 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18px, 1fr));
+  gap: 15px;
+  
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s; 
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== TABLA ===== */
+.tabla-cosmetica {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-cosmetica th {
+  background: #e6b8c8;
+  color: white;
+  padding: 10px;
+}
+
+.tabla-cosmetica td {
+  padding: 10px;
+  border-bottom: 1px solid #f2d8e3;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario-belleza {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.formulario-belleza input,
+.formulario-belleza textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e6b8c8;
+  border-radius: 6px;
+}
+
+.formulario-belleza button {
+  width: fit-content;
+  background: #e6b8c8;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.formulario-belleza button:hover {
+  background: #d893ac;
+}
+
+/* ===== CONTACTO ===== */
+#contacto {
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #e6b8c8;
+  padding: 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.site-footer a {
+  color: white;
+  text-decoration: none;
+}
